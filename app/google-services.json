@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "937744069069",
+    "project_id": "wasteshare-567e4",
+    "storage_bucket": "wasteshare-567e4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937744069069:android:7b64b6ccdc9e2db9e79484",
+        "android_client_info": {
+          "package_name": "com.software.donate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHbPA9uvsWp9c-YVNDq5gtAJM5Rrq-S4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

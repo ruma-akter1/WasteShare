@@ -13,8 +13,17 @@
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.software.donate.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_navigation_dashboard_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.software.donate.ui.login.LoginFragment"
+        tools:layout="@layout/fragment_login" />
+
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.software.donate.ui.notifications.NotificationsFragment"

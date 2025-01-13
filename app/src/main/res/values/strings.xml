@@ -5,4 +5,14 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_donate">Donate</string>
     <string name="title_claim">Claim</string>
+    <string name="google_maps_key">AIzaSyB9SdF4SXF6P8TDL9Bt3CYD3bUiSlT01f4</string>
+    <string-array name="donation_types">
+        <item>Food</item>
+        <item>Clothes</item>
+        <item>Furniture</item>
+        <item>Books</item>
+        <item>Electronics</item>
+        <item>Toys</item>
+        <item>Custom</item>
+    </string-array>
 </resources>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,35 +12,154 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
+        <!-- City Location -->
         <TextView
-            android:id="@+id/text_donate"
+            android:id="@+id/text_city_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Donate"
-            android:textSize="24sp"
+            android:text="City Location"
+            android:textSize="18sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <EditText
-            android:id="@+id/editText_donate_amount"
-            android:layout_width="0dp"
+        <!-- Donation Type Options -->
+        <TextView
+            android:id="@+id/text_donation_type"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter amount"
-            android:inputType="numberDecimal"
-            app:layout_constraintTop_toBottomOf="@id/text_donate"
+            android:text="Select Donation Type"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/text_city_location"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.8" />
+            android:layout_marginTop="16dp" />
+
+        <Spinner
+            android:id="@+id/spinner_donation_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/donation_types"
+            app:layout_constraintTop_toBottomOf="@id/text_donation_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="8dp" />
+
+        <!-- Quantity Section -->
+        <TextView
+            android:id="@+id/text_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/spinner_donation_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editText_quantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter quantity"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/text_quantity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="8dp" />
+
+        <!-- Description Section -->
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/editText_quantity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editText_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter description"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/text_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="8dp" />
+
+        <!-- Collection Time Section -->
+        <TextView
+            android:id="@+id/text_collection_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Collection Time"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/editText_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/button_collection_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Collection Time"
+            app:layout_constraintTop_toBottomOf="@id/text_collection_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/text_selected_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No time selected"
+            app:layout_constraintTop_toBottomOf="@id/button_collection_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Location Section -->
+        <TextView
+            android:id="@+id/text_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/text_selected_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editText_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter location"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/text_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="8dp" />
 
         <Button
             android:id="@+id/button_donate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Donate"
-            app:layout_constraintTop_toBottomOf="@id/editText_donate_amount"
+            app:layout_constraintTop_toBottomOf="@id/editText_location"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
